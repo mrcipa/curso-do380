@@ -1,0 +1,26 @@
+---
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: logging-diagnose
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noisy
+  namespace: logging-diagnose
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: noisy
+  template:
+    metadata:
+      labels:
+        app: noisy
+    spec:
+      containers:
+      - image: registry.ocp4.example.com:8443/redhattraining/logger:v0.5
+        name: noisy
+        args: ["--delay", "100ms"]
+...
