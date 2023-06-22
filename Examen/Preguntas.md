@@ -1,8 +1,8 @@
-**Requerimientos del examen**
+# Requerimientos del examen
 
-*Realizar los siguientes pasos:*
-````
-````
+## Realizar los siguientes pasos:
+
+### -----------------------
 
 # 1. Configure autenticación LDAP
 
