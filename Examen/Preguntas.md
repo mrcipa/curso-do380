@@ -9,19 +9,20 @@
 
 Un usuario llamado samwell con contraseña RoboC0p ha sido configurado en el servidor LDAP de la siguiente manera:
 
-````
- * La direccion del servidor LDAP es ldaps://idm.domainxx.example.com/cn=users,cn=accounts,dc=domainxx,dc=example,dc=com?uid
- * El usuario LDAP para vincular en este servidor es el uid=admin,cn=users,cn=accounts,dc=domainxx,dc=example,dc=com
- * La contraseña del administrador del servidor LDAP es Sestiver14
- * El certificado de CA para el servidor LDAP esta localizado en https://idm.domainxx.example.com/ipa/config/ca.crt
-````
+>
+ - [ ] La direccion del servidor LDAP es ldaps://idm.domainxx.example.com/cn=users,cn=accounts,dc=domainxx,dc=example,dc=com?uid
+ - [ ] El usuario LDAP para vincular en este servidor es el uid=admin,cn=users,cn=accounts,dc=domainxx,dc=example,dc=com
+ - [ ] La contraseña del administrador del servidor LDAP es Sestiver14
+ - [ ] El certificado de CA para el servidor LDAP esta localizado en https://idm.domainxx.example.com/ipa/config/ca.crt
+>
+
 Siendo así, configure su clúster de tal manera que samwell tenga acceso de cluster-admin y los siguientes requerimientos son verdaderos:
 
-````
-✓ Autenticacion para el usuario samwell es proveida por el servidor LDAP
-✓ La contraseña del administrador del servidor LDAP está guardada como un Secret llamado idm-secret
-✓ El certificado de CA para el servidor CA esta guardado en un ConfigMap llamado idm-ca-configmap
-````
+>
+- [ ] Autenticacion para el usuario samwell es proveida por el servidor LDAP
+- [ ] La contraseña del administrador del servidor LDAP está guardada como un Secret llamado idm-secret
+- [ ] El certificado de CA para el servidor CA esta guardado en un ConfigMap llamado idm-ca-configmap
+>
 Usted puede usar una plantilla que existe en /home/opsadm/ocp-auth. Una vez que la autenticación y la autorización sea configurada, el usuario samwell es capaz de ejecutar el siguiente comando:
 
 ````
@@ -38,17 +39,20 @@ wget http://domainxx.example.com/template/ocp-auth/ldap-cr.yml
 # 2. Despliegue una aplicación usando Ansible
 
 El directorio /home/opsadm/ansible-code contiene:
-````
-✔︎ object-play-2048-*.yaml
-````
+>
+- [ ] object-play-2048-*.yaml
+>
 Objetos de OpenShift, necesarios para desplegar la aplicación.
-````
-✔︎ deploy-play-2048.yaml
-````
+>
+- [ ] deploy-play-2048.yaml
+>
 Playbook de Ansible con tareas que necesita implementar
 
 Complete las tareas solicitadas en el *playbook* y después use el *playbook*  para desplegar la aplicación.
 Cuando haya copletado todas las tareas solicitadas correctamente, la aplicación estara disponible en: (http:play-2048-dapibus.apps.domainxx.example.com) 
+
+| :point_up: Importante |
+|-----------------------|
 En caso de requerirse puede descargar los archivos así:
 
 ````
