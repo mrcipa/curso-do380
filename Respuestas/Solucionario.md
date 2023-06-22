@@ -46,6 +46,12 @@ oc apply -f ldap-cr.yml
 ````
 sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT
 ````
+- [ ] Asigne el rol de cluster-admin al usuario de LDAP
+
+````
+oc adm policy add-cluster-role-to-user cluster-admin samwell
+````
+
 - [ ] Ejecute el comando que solicitan en la pregunta:
 
 ````
