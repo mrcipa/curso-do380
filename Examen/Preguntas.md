@@ -51,8 +51,8 @@ Playbook de Ansible con tareas que necesita implementar
 Complete las tareas solicitadas en el *playbook* y después use el *playbook*  para desplegar la aplicación.
 Cuando haya copletado todas las tareas solicitadas correctamente, la aplicación estara disponible en: (http:play-2048-dapibus.apps.domainxx.example.com) 
 
-| :point_up: Importante |
-|-----------------------|
+| :memo: Tome Nota |
+
 En caso de requerirse puede descargar los archivos así:
 
 ````
