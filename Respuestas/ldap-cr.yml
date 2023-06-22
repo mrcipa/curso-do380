@@ -11,10 +11,16 @@ spec:
       attributes:
         id:
           - dn
+        email:
+          - mail
+        name:
+          - cn
         preferredUsername:
           - uid
-      bindDN:
+      bindDN: uid=admin,cn=users,cn=accounts,dc=domainxx,dc=example,dc=com
       bindPassword:
+        name: idm-secret
       ca:
-      insecure:
-      url:
+        name: idm-ca-configmap
+      insecure: false
+      url: ldaps://idm.domainxx.example.com/cn=users,cn=accounts,dc=domainxx,dc=example,dc=com?uid

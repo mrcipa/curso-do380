@@ -18,3 +18,38 @@ set cursorline
 ````
 Esto va a ser de utilidad durante el examen
 >
+
+- [ ] Ahora cree un secreto con el password del admin de LDAP que le proveen en el examen.
+
+````
+oc create secret generic idm-secret --from-literal=bindPassword=<password> -n openshift-config
+````
+
+- [ ] Descargue el certificado que indican y cree un configMap 
+
+````
+oc create configmap idm-ca-configmap --from-file=ca.crt=ca.crt -n openshift-config
+````
+
+- [ ] Modifique el archivo ldap-cr.yml con los valores que se encuentran en la descripcion
+- [ ] Aplique la configuración
+
+````
+oc apply -f ldap-cr.yml
+````
+- [ ] Cierre sesión en la consola e ingrese con el usuario de LDAP. 
+
+![Alt text](image.png)
+
+- [ ] Hecho esto, genere el token de acceso y copie únicamente la parte que dice token
+
+````
+sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT
+````
+- [ ] Ejecute el comando que solicitan en la pregunta:
+
+````
+curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT" -X GET https://oauth-openshift.apps.domainxx.example.com:6443/api/v1/pods |jq -r 'items[].metadata.name'
+````
+
+ 
