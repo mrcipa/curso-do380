@@ -71,6 +71,7 @@ Configure Alertmanager modificando /home/opsadm/alertmanager/alertmanager.yaml c
 ✔︎ Hay un destinatario llamado email-notification con direccion de correo ocp-alert@domainxx.example.com
 ✔︎ Existe una ruta que coincide con alertname: "Watchdog" usando el remitente por omisión (default)
 ✔︎ Existe una ruta que coincide con severity: "critical" usando el remitente email-notification
+>
 
 Se puede utilizar el comando mailx con el usuario opsadm en el equipo workbench para verificar las alertas de mensajes.
 Se pueden bajar los archivos asi:
