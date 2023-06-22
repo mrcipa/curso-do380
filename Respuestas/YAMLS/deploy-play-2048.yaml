@@ -16,7 +16,7 @@
   tasks:
     
     - name: Create te project called "{{ namespace }}"
-      k8s:
+      kubernetes.core.k8s:
         api_version: project.openshift.io/v1
           kind: Project 
           name: "{{ namespace }}"
@@ -24,7 +24,7 @@
         namespace: ""
     
     - name: Creating user "{{ username }}" from manifest
-      k8s:
+      kubernetes.core.k8s:
         state: present
         src: "{{ playbook_dir + '/object-play-2048-ServiceAccount.yaml' }}"
     
@@ -32,12 +32,12 @@
       shell: oc -n {{ namespace }} adm policy add-scc-to-user anyuid -z {{ username }} --as system:admin
 
     - name: Get a info about the pods in the "{{ namespace }}" namespace
-      k8s_info:
+      kubernetes.core.k8s_info:
         kind: Pod
         namespace: "{{ namespace }}"
 
     - name: Get hostname of the route
-      k8s_info:
+      kubernetes.core.k8s_info:
         kind: Route 
         namespace: "{{ namespace }}"
         name: "{{ appname }}"
@@ -45,13 +45,13 @@
 
     - name: Test access to the app
       uri:
-        url: "http://{{ route.resources[0].spec.host }}"
+        url: "http://{{ route['result']['spec']['host'] }}"
         return_content: yes
       register: response
-      until: response.estatus == 200
+      until: response['status'] == 200
       retries: 10
       delay: 5
 
     - name: Display response of the application
       debug:
-        var: response.content
+        var: response['content']
