@@ -68,3 +68,6 @@ https://patriciocerda.com/?p=1434
 Observe el video a continuación:
 
 [![Video](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/100px-OpenShift-LogoType.svg.png)](https://www.youtube.com/watch?v=DHO2lEZoRac)
+
+
+# 9. Configure
