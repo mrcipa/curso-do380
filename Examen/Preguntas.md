@@ -3,8 +3,11 @@
 *Realizar los siguientes pasos:*
 
 1. Configure autenticación LDAP
-````
+
+
 Un usuario llamado samwell con contraseña RoboC0p ha sido configurado en el servidor LDAP de la siguiente manera:
+
+````
  - La direccion del servidor LDAP es ldaps://idm.domainxx.example.com/cn=users,cn=accounts,dc=domainxx,dc=example,dc=com?uid
  - El usuario LDAP para vincular en este servidor es el uid=admin,cn=users,cn=accounts,dc=domainxx,dc=example,dc=com
  - La contraseña del administrador del servidor LDAP es Sestiver14
