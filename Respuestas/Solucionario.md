@@ -58,4 +58,15 @@ oc adm policy add-cluster-role-to-user cluster-admin samwell
 curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT" -X GET https://oauth-openshift.apps.domainxx.example.com:6443/api/v1/pods |jq -r 'items[].metadata.name'
 ````
 
- 
+# 6. Configure NTP
+
+Revisar la siguiente URL:
+https://patriciocerda.com/?p=1434 
+
+# 8. Configure una aplicación para utilizar almacenamiento NFS
+
+Observe el video a continuación:
+
+<iframe width="600" height = "420"
+src="https://youtu.be/DHO2lEZoRac">
+</iframe>
