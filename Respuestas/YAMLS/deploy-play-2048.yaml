@@ -18,8 +18,8 @@
     - name: Create te project called "{{ namespace }}"
       kubernetes.core.k8s:
         api_version: project.openshift.io/v1
-          kind: Project 
-          name: "{{ namespace }}"
+        kind: Project 
+        name: "{{ namespace }}"
         state: present
         namespace: ""
     
