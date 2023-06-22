@@ -176,7 +176,7 @@ Despliegue una aplicación con los siguientes requerimientos:
 - [ ] La aplicación existe en un proyecto llamado *page*
 - [ ] La aplicación usa un *Deployment* llamado *landing*
 - [ ] La aplicación usa la imagen hosteada en quay.domainxx.example.com/nginxnc/nginx-unprivileged:latest
-- [ ] El mountpoint del nginx es /usr/sharen/ginx/html
+- [ ] El mountpoint del nginx es /usr/share/nginx/html
 - [ ] La aplicación usa 3 pods
 - [ ] La aplicación debe estar disponible en https://landing-page.apps.domainxx.example.com 
 >
