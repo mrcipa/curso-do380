@@ -79,3 +79,17 @@ Se pueden bajar los archivos asi:
 wget http://domainxx.example.com/template/alertmanager/alertmanager.yaml
 ````
 
+# 4. Cree un cron job
+
+Cree un cron job usando la imagen ubicada en quay.domainxx.example.com/cron/job-runner:latest con los siguientes parámetros:
+
+````
+✔︎ El nombre de cron job debe ser el mismo que el nombre de la imagen
+✔︎ El cron job debe ejecutarse en el siguiente periodo de tiempo: 04:05 en el segundo día de cada mes.
+✔︎ El límite del tamaño del historial exitoso es 14
+✔︎ El nombre usado en *serviceAccount* y *serviceAccountName* es magna
+✔︎ El cron job corre en el proyecto llamado *elementum* 
+
+````
+
+
