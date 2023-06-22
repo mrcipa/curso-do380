@@ -27,4 +27,5 @@ En caso de ser necesario los archivos para esta tarea pueden ser bajados asi:
 
 ````
 wget http://domainxx.example.com/template/ocp-auth/ldap-cr.yml 
-```
+````
+
