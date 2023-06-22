@@ -1,0 +1,57 @@
+---
+- name: Deploy play-2048 application
+  hosts: localhost
+  vars:
+    namespace: dapibus
+    appname: play-2048
+    username: gamepage
+
+  module_defaults:
+    group/k8s:
+      namespace: "{{ namespace }}"
+      name: "{{ appname }}"
+      username: "{{ username }}"
+      ca_cert: "/etc/pki/tls/certs/ca-bundle.crt"
+
+  tasks:
+    
+    - name: Create te project called "{{ namespace }}"
+      k8s:
+        api_version: project.openshift.io/v1
+          kind: Project 
+          name: "{{ namespace }}"
+        state: present
+        namespace: ""
+    
+    - name: Creating user "{{ username }}" from manifest
+      k8s:
+        state: present
+        src: "{{ playbook_dir + '/object-play-2048-ServiceAccount.yaml' }}"
+    
+    - name: Applying anyuid scc to user "{{ username }}"
+      shell: oc -n {{ namespace }} adm policy add-scc-to-user anyuid -z {{ username }} --as system:admin
+
+    - name: Get a info about the pods in the "{{ namespace }}" namespace
+      k8s_info:
+        kind: Pod
+        namespace: "{{ namespace }}"
+
+    - name: Get hostname of the route
+      k8s_info:
+        kind: Route 
+        namespace: "{{ namespace }}"
+        name: "{{ appname }}"
+      register: route
+
+    - name: Test access to the app
+      uri:
+        url: "http://{{ route.resources[0].spec.host }}"
+        return_content: yes
+      register: response
+      until: response.estatus == 200
+      retries: 10
+      delay: 5
+
+    - name: Display response of the application
+      debug:
+        var: response.content
