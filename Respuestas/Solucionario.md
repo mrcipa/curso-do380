@@ -67,4 +67,4 @@ https://patriciocerda.com/?p=1434
 
 Observe el video a continuación:
 
-[![Alt text](https://img.youtube.com/vi/DHO2lEZoRac/0.jpg)](https://www.youtube.com/watch?v=DHO2lEZoRac)
+[![ ](https://img.youtube.com/vi/DHO2lEZoRac/0.jpg)](https://www.youtube.com/watch?v=DHO2lEZoRac)
