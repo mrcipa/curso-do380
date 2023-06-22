@@ -2,7 +2,7 @@
 
 *Realizar los siguientes pasos:*
 
-1. Configure autenticación LDAP
+**1.** Configure autenticación LDAP
 
 
 Un usuario llamado samwell con contraseña RoboC0p ha sido configurado en el servidor LDAP de la siguiente manera:
