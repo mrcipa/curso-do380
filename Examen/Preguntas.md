@@ -63,14 +63,14 @@ wget http://domainxx.example.com/template/ansible-code/deploy-play-2048-Service.
 Configure Alertmanager modificando /home/opsadm/alertmanager/alertmanager.yaml con los siguientes requerimientos:
 
 >
-✔︎ El nombre del servidor SMTP es: mail.domainxx.example.com
-✔︎ El servidor SMTP escucha en el puerto 25/TCP
-✔︎ El servidor SMTP no usa autenticación
-✔︎ El servidor SMTP no usa TLS
-✔︎ La dirección del remitente es: alerts-from-ocp@domainxx.example.com
-✔︎ Hay un destinatario llamado email-notification con direccion de correo ocp-alert@domainxx.example.com
-✔︎ Existe una ruta que coincide con alertname: "Watchdog" usando el remitente por omisión (default)
-✔︎ Existe una ruta que coincide con severity: "critical" usando el remitente email-notification
+- [] El nombre del servidor SMTP es: mail.domainxx.example.com
+- [] El servidor SMTP escucha en el puerto 25/TCP
+- [] El servidor SMTP no usa autenticación
+- [] El servidor SMTP no usa TLS
+- [] La dirección del remitente es: alerts-from-ocp@domainxx.example.com
+- [] Hay un destinatario llamado email-notification con direccion de correo ocp-alert@domainxx.example.com
+- [] Existe una ruta que coincide con alertname: "Watchdog" usando el remitente por omisión (default)
+- [] Existe una ruta que coincide con severity: "critical" usando el remitente email-notification
 >
 
 Se puede utilizar el comando mailx con el usuario opsadm en el equipo workbench para verificar las alertas de mensajes.
