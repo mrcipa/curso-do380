@@ -67,6 +67,10 @@ https://patriciocerda.com/?p=1434
 
 Observe el video a continuación:
 
+<div>
+<p style = 'text-align:center;'>
 <iframe width="600" height = "420"
 src="https://youtu.be/DHO2lEZoRac">
 </iframe>
+</div>
+</p>
