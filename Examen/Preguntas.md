@@ -84,12 +84,17 @@ wget http://domainxx.example.com/template/alertmanager/alertmanager.yaml
 Cree un cron job usando la imagen ubicada en quay.domainxx.example.com/cron/job-runner:latest con los siguientes parámetros:
 
 ````
-✔︎ El nombre de cron job debe ser el mismo que el nombre de la imagen
-✔︎ El cron job debe ejecutarse en el siguiente periodo de tiempo: 04:05 en el segundo día de cada mes.
-✔︎ El límite del tamaño del historial exitoso es 14
-✔︎ El nombre usado en *serviceAccount* y *serviceAccountName* es magna
-✔︎ El cron job corre en el proyecto llamado *elementum* 
+- [] El nombre de cron job debe ser el mismo que el nombre de la imagen
+- [] El cron job debe ejecutarse en el siguiente periodo de tiempo: 04:05 en el segundo día de cada mes.
+- [] El límite del tamaño del historial exitoso es 14
+- [] El nombre usado en serviceAccount y serviceAccountName es magna
+- [] El cron job corre en el proyecto llamado elementum
 
 ````
+
+# 5. Migre una aplicación
+
+El directorio /home/opsadm/assemble contiene objetos k8s de una aplicacion que fue exportada desde un clúster de Kubernetes y una imagen que fue usada para la aplicación.
+Utilice estos artefactos para instalar la aplicacion en el cluster de OpenShift de acuerdo a los siguientes requerimientos:
 
 
