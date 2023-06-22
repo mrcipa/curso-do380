@@ -39,7 +39,7 @@ oc apply -f ldap-cr.yml
 ````
 - [ ] Cierre sesión en la consola e ingrese con el usuario de LDAP. 
 
-![Alt text](image.png)
+![Alt text](Images/image.png)
 
 - [ ] Hecho esto, genere el token de acceso y copie únicamente la parte que dice token
 
