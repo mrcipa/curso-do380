@@ -57,6 +57,13 @@ oc adm policy add-cluster-role-to-user cluster-admin samwell
 ````
 curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT" -X GET https://oauth-openshift.apps.domainxx.example.com:6443/api/v1/pods |jq -r 'items[].metadata.name'
 ````
+# 4. Cree un Cron Job
+
+|:warning: Nota importante|
+|-------------------------|
+
+Revisar la documentación en el examen. 4.10/html/nodes/using-jobs-and-daemonsets
+https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/nodes/using-jobs-and-daemonsets 
 
 # 6. Configure NTP
 
