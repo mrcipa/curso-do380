@@ -57,6 +57,11 @@ oc adm policy add-cluster-role-to-user cluster-admin samwell
 ````
 curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT" -X GET https://oauth-openshift.apps.domainxx.example.com:6443/api/v1/pods |jq -r 'items[].metadata.name'
 ````
+# 3. Configure Alertmanager
+
+Revisar este repo
+https://gitlab.consulting.redhat.com/iberia-consulting/iss/ocp4-monitoring
+
 # 4. Cree un Cron Job
 
 |:warning: Nota importante|
