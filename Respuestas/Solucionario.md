@@ -70,6 +70,7 @@ https://gitlab.consulting.redhat.com/npss/workshop/openshift_logging
 
 Revisar la documentación en el examen. 4.10/html/nodes/using-jobs-and-daemonsets
 https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/nodes/using-jobs-and-daemonsets 
+https://blog.295devops.com/y-si-usamos-los-cronjobs-en-kubernetes
 
 # 6. Configure NTP
 
