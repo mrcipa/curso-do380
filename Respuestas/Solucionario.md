@@ -61,7 +61,9 @@ curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfj
 
 Revisar este repo
 https://gitlab.consulting.redhat.com/iberia-consulting/iss/ocp4-monitoring
+
 https://gitlab.consulting.redhat.com/npss/workshop/openshift_logging
+
 https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/managing-alerts#accessing_the_alerting_ui_managing-alerts
 
 # 4. Cree un Cron Job
