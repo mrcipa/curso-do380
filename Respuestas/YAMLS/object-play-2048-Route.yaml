@@ -1,0 +1,17 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: play-2048
+  namespace: dapibus
+  labels: 
+    app: play-2048
+    app.kubernetes.io/component: play-2048
+    app.kubernetes.io/instance: play-2048
+spec:
+  host: play-2048-dapibus.apps.domainxx.example.com
+  port:
+    targetPort: 80-tcp
+  to:
+    kind: Service
+    name: play-2048

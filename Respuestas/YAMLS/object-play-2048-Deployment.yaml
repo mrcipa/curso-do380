@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: play-2048
+  namespace: dapibus
+spec:
+  selector:
+    matchLabels:
+      deployment: play-2048
+  template:
+    metadata:
+      labels:
+        deployment: play-2048
+    spec: 
+      containers:
+      - image: quay.io/domainxx.example.com/play-2048:latest
+        name: play-2048
+        ports: 
+        - containerPort: 80
+          protocol: TCP
+      securityContext: {}
+      serviceAccount: gamepage
+      serviceAccountName: gamepage
