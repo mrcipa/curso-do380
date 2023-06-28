@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: redhat-landing
-        image:
+        image: docker.io/darleilopes/redhat-landing
         ports:
         - containerPort: 8080
 ---
