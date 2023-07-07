@@ -57,6 +57,13 @@ oc adm policy add-cluster-role-to-user cluster-admin samwell
 ````
 curl -sk --header "Authorization: Bearer sha256~UCyhgtedndsdfjdldgjk-_sfdskfslfjhskfj_hHthagT" -X GET https://oauth-openshift.apps.domainxx.example.com:6443/api/v1/pods |jq -r 'items[].metadata.name'
 ````
+# 2. Despliegue una aplicación usando Ansible
+
+Verificar la forma de instalar la colección
+- No se pueden listar las colecciones, el comando ansible-galaxy collection list no funciona
+- Instalarla asi: ansible-galaxy collection install kubernetes.core
+- Arreglar la indentación
+
 # 3. Configure Alertmanager
 
 Revisar este repo

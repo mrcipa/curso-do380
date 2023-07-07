@@ -1,0 +1,8 @@
+image-registry.openshift-image-registry.svc:5000/page/httpd-example@sha256:b3f43702bda2fe1ae4255ce4fdc1d2c2353418ec3c7bd633b8ce51f8e16ade56
+
+https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html
+https://www.ansible.com/blog/introducing-the-ansible-content-collection-for-red-hat-openshift
+https://github.com/containers/podman/issues/18111
+https://access.redhat.com/solutions/6959306
+
+--import-profile=/Users/miltoncipamocha/Documents/RedHat/XM/dllo3.ovpn --name=dllo3  --ca=/Users/miltoncipamocha/Documents/RedHat/XM/ca.crt --pkp=/Users/miltoncipamocha/Documents/RedHat/XM/dllo3.key certificate=/Users/miltoncipamocha/Documents/RedHat/XM/dllo3.crt
