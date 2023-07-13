@@ -95,3 +95,27 @@ Observe el video a continuación:
 
 
 # 9. Configure
+
+notas:
+
+para el punto 5
+se debe exponer el registro
+podman image load -i archivo.tar.xz
+
+instalar operadores habilitando la opción clúster monitor
+
+hay que hacer troubleshooting de worker2
+uncordon
+
+ssh core@worker2 "sudo systemctl enable crío y kubelet"
+
+El ansible no crea nada, revisar
+
+en migration.yaml buscar el dominio en el ingress y colocar el dominio que piden también la imagen
+
+investigación sobre cómo leer correos con mailx
+
+configuración de NTP ver URL en las respuestas tener en cuenta charset=utf-8
+
+
+
