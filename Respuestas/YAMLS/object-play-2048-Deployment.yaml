@@ -14,7 +14,7 @@ spec:
         deployment: play-2048
     spec: 
       containers:
-      - image: quay.io/domainxx.example.com/play-2048:latest
+      - image: registry/domainxx.example.com/play-2048:latest
         name: play-2048
         ports: 
         - containerPort: 80
