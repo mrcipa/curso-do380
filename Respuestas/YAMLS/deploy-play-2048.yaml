@@ -22,6 +22,21 @@
         name: "{{ namespace }}"
         state: present
         namespace: ""
+
+    - name: Creating Deployment "{{ appname }}" from manifest
+      kubernetes.core.k8s:
+        state: present
+        src: "{{ playbook_dir + '/object-play-2048-Deployment.yaml' }}"
+
+    - name: Creating Route "{{ appname }}" from manifest
+      kubernetes.core.k8s:
+        state: present
+        src: "{{ playbook_dir + '/object-play-2048-Route.yaml' }}"
+
+    - name: Creating Service "{{ appname }}" from manifest
+      kubernetes.core.k8s:
+        state: present
+        src: "{{ playbook_dir + '/object-play-2048-Service.yaml' }}"
     
     - name: Creating user "{{ username }}" from manifest
       kubernetes.core.k8s:
@@ -29,7 +44,10 @@
         src: "{{ playbook_dir + '/object-play-2048-ServiceAccount.yaml' }}"
     
     - name: Applying anyuid scc to user "{{ username }}"
-      shell: oc -n {{ namespace }} adm policy add-scc-to-user anyuid -z {{ username }} --as system:admin
+      shell: "oc -n {{ namespace }} adm policy add-scc-to-user anyuid -z {{ username }} --as system:admin"
+
+    - name: Set SA to Deployment  "{{ appname }}"
+      shell: "oc set sa deployment/{{ appname }} {{ username }} -n {{ namespace }}
 
     - name: Get a info about the pods in the "{{ namespace }}" namespace
       kubernetes.core.k8s_info:
@@ -45,7 +63,7 @@
 
     - name: Test access to the app
       uri:
-        url: "http://{{ route['result']['spec']['host'] }}"
+        url: "http://{{ route.['spec']['host'] }}"
         return_content: yes
       register: response
       until: response['status'] == 200
