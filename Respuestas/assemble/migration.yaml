@@ -38,14 +38,6 @@ metadata:
     app: redhat-landing
   name: redhat-landing
   namespace: egestas
-spec:
-  clusterIP: 
-  clusterIPs:
-  - 
-  internalTrafficPolicy: cluster 
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - port: 8080
     protocol: TCP 
